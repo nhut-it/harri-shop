@@ -1,0 +1,118 @@
+.nav-menu .nav-link a{
+    transition: all .4s;
+}
+.nav-menu .nav-link:hover > a{
+    color: #F72C79;
+}
+.nav-link .sub-menu{
+    /* display: none;
+     */
+     visibility: hidden;
+     transform-origin: top center;
+    transform: scaleY(0);  
+    opacity: 0;
+    transition: all .5s linear;
+}
+.nav-link:hover .sub-menu{
+    /* display:block ; */
+    /* animation: scaleSubmenu linear .5s;
+    transform-origin:top center ; */
+    visibility: visible;
+    transform: scaleY(1);
+    opacity: 1;
+
+}
+
+.sub-menu >li:hover  a{
+    color: #F72C79;
+    
+}
+.sub-menu >li a::before{
+    content: '';
+    width: 10px;
+    height: 1px;
+    background-color: #F72C79;
+    margin-right: 5px;
+    display: none;
+   transform: translateY(-3px);
+    /* transition: all .5s; */
+   animation: fadeLineSubmenu .2s ease-in-out;
+
+}
+.sub-menu >li:hover a::before{
+    display: inline-block;
+}
+@keyframes fadeLineSubmenu {
+    from{
+        opacity: 0;
+        width: 0;
+    }
+    to{
+        opacity: 1;
+        width: 10px;
+    }
+    
+}
+@keyframes scaleSubmenu {
+    from{
+        transform: scaleY(0.4);
+        opacity: 0;
+    }
+    to{
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+.navbar span{
+    transition: all .3s;
+}
+.navbar:hover span{
+    background-color: #F72C79;
+}
+.navbar:hover :first-child
+
+{
+    transform: translateX(5px);
+
+}
+.navbar:hover :last-child{
+    transform: translateX(-5px);
+}
+
+.sidebar-content .sidebar-wrapper .close-btn:hover .icon-close{
+    color: white;
+    
+}
+.sidebar-content .follow .list-social li:hover {
+    background-color: #F72C79;
+    color: white;
+    border-color: #F72C79;
+}
+.sidebar-content::-webkit-scrollbar{
+    display: none;
+}
+.menu-sidebar .overlay{display: none;}
+.menu-sidebar .overlay.active{
+    display: block;
+}
+.menu-sidebar .sidebar-content{
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all .5s ease-in-out;
+}
+.menu-sidebar .sidebar-content.active{
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0%);
+}
+/* "menu-sidebar active h-[100vh] w-screen fixed top-0 left-0 right-0 bottom-0 opacity-90 bg-[#4A4B5B] " */
+
+.ant-collapse-header {
+    padding: 0 !important;
+   }
+.ant-collapse-header-text{
+    font-weight: medium !important;
+    font-size: 14px !important;
+    color: #525258 !important;
+}
