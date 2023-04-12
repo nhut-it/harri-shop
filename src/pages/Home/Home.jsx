@@ -14,7 +14,9 @@ import ipad from "../../assets/imgs/ipad.webp";
 import camera from "../../assets/imgs/camera-blu.webp";
 import vr from "../../assets/imgs/vr.webp";
 import watches from "../../assets/imgs/watches.webp";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 
+import CardProduct from "./CardProduct/CardProduct";
 const Home = () => {
   return (
     <div>
@@ -74,6 +76,53 @@ const Home = () => {
               <CardTopic img={watches} data={" Wireless & Watches"} />
             </SwiperSlide>
           </Swiper>
+        </div>
+      </div>
+      <div className="home-productPopular bg-white pb-[20px]">
+        <div className="container mx-auto  ">
+          <Tabs>
+            <div className="flex  md:flex-row flex-col md:justify-between md:items-center pb-[30px]">
+              <h2 className="text-[30px] mb-[40px] md:mb-0 font-bold pl-[10px] border-l-4 border-primary">
+                Popular Products
+              </h2>
+              <TabList className="flex text-sm">
+                <Tab className="mr-[25px] cursor-pointer tab-product">
+                  <button className="px-[5px]">Top Rated</button>
+                </Tab>
+                <Tab className="mr-[25px] cursor-pointer tab-product">
+                  <button className="px-[5px]">Best selling</button>
+                </Tab>
+                <Tab className="mr-[25px] cursor-pointer tab-product">
+                  <button className="px-[5px]">Lastest Product</button>
+                </Tab>
+              </TabList>
+            </div>
+            <TabPanel>
+              <div className="products grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-[50px]">
+                <div className="product-item">
+                  <CardProduct />
+                </div>
+                <div className="product-item">
+                  <CardProduct />
+                </div>
+                <div className="product-item">
+                  <CardProduct />
+                </div>
+                <div className="product-item">
+                  <CardProduct />
+                </div>
+                <div className="product-item">
+                  <CardProduct />
+                </div>
+                <div className="product-item">
+                  <CardProduct />
+                </div>
+              </div>
+            </TabPanel>
+            <TabPanel>
+              <h2>Any content 2</h2>
+            </TabPanel>
+          </Tabs>
         </div>
       </div>
     </div>

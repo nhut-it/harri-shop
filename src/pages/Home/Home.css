@@ -10,3 +10,27 @@
  .swiper .swiper-wrapper{
     padding-bottom: 42px !important;
  }
+
+ /* Tabs Home product popular */
+
+ .home-productPopular .react-tabs__tab--selected{
+   border: none;
+   color: #F72C79;
+   position: relative;
+}
+
+.home-productPopular  .tab-product::after{
+   content: '';
+   display: block;
+   height: 2px;
+   background-color:#F72C79;
+   width: 0;
+   position: absolute;
+   top: 100%;
+   
+   left: 0;
+}
+.home-productPopular  .react-tabs__tab--selected.tab-product::after{
+   width: 100%;
+   transition: all .6s;
+}

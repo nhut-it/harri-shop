@@ -1,0 +1,21 @@
+.card-product .card-img{
+    overflow: hidden;
+}
+.card-product:hover .card-img img{
+    transform: scale(1.2);
+    transition: all .5s;
+}
+.card-product .btn-addToCard{
+    transform: translateY(102%);
+}
+.card-product:hover .btn-addToCard{
+    transform: translateY(0);
+    transition: all .6s;
+}
+.card-product .product-action{
+    transform: translateX(calc(100% + 8px));
+}
+.card-product:hover .product-action{
+    transform: translateX(0);
+    transition: all .5s;
+}
