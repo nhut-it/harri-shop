@@ -1,0 +1,14 @@
+
+.scroll-top{
+    visibility: hidden;
+    transform: translateY(100%);
+    transition: all .2s linear;
+    opacity: 0;
+}
+
+.show{
+   visibility: visible;
+   transition: all .4s linear;
+    transform: translateY(0);
+    opacity: 1;
+}

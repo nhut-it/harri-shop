@@ -7,9 +7,9 @@ import {
   AiOutlineClose,
   AiFillYoutube,
   AiOutlinePlus,
-  AiOutlinePlusSquare,
 } from "react-icons/ai";
 import { IoIosArrowForward } from "react-icons/io";
+import { MdKeyboardArrowDown } from "react-icons/md";
 import { BsTwitter } from "react-icons/bs";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import bgSidebar from "../../assets/imgs/bg-sidebar.webp";
@@ -75,7 +75,9 @@ const Header = () => {
           </li>
 
           <li className="nav-link text-content pl-[30px] hover:last:text-red-300 relative  cursor-pointer leading-[78px]">
-            <a href="#">Pages</a>
+            <a href="#">
+              Pages <MdKeyboardArrowDown className="inline" />
+            </a>
             <motion.ul className="min-w-[200px] z-50  shadow-lg font-normal sub-menu text-content bg-white pl-[25px] pt-[25px]  pb-[25px] absolute top-full leading-[26px] text-[15px]">
               <li>
                 <a href="#" className="text-[14px]">
