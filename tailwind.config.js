@@ -14,13 +14,24 @@ module.exports = {
           "0%": { transfrom: "rotate(0)" },
           "100%": { transfrom: "rotate(45deg)" },
         },
+        "grow-up": {
+          "0%": { opacity: 1, transfrom: "scale(1)" },
+          "100%": { opacity: 0, transfrom: "scale( 0 )" },
+        },
       },
       animation: {
         "rotate-plus": "rotate-plus .3s linear",
+        "grow-up": "grow-up .5s linner infinite",
       },
     },
     container: {
-      padding: "30px",
+      padding: {
+        DEFAULT: "1rem",
+        sm: "2rem",
+        lg: "4rem",
+        xl: "5rem",
+        "2xl": "6rem",
+      },
     },
 
     screens: {

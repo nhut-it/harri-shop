@@ -41,7 +41,7 @@ const Header = () => {
   };
   return (
     <header
-      className={`px-[30px] h-[78px] border-b flex items-center  justify-between mx-auto xl:px-[60px] 2xl:px-[185px]  ${stickyClass}`}
+      className={`px-[30px] h-[78px] border-b flex items-center  justify-between mx-auto xl:px-[60px] 2xl:px-[145px]  ${stickyClass}`}
     >
       <a href="#">
         <img
@@ -76,7 +76,7 @@ const Header = () => {
 
           <li className="nav-link text-content pl-[30px] hover:last:text-red-300 relative  cursor-pointer leading-[78px]">
             <a href="#">Pages</a>
-            <motion.ul className="min-w-[200px]  shadow-lg font-normal sub-menu text-content bg-white pl-[25px] pt-[25px]  pb-[25px] absolute top-full leading-[26px] text-[15px]">
+            <motion.ul className="min-w-[200px] z-50  shadow-lg font-normal sub-menu text-content bg-white pl-[25px] pt-[25px]  pb-[25px] absolute top-full leading-[26px] text-[15px]">
               <li>
                 <a href="#" className="text-[14px]">
                   FAQs
@@ -199,8 +199,8 @@ const Header = () => {
           onClick={() => setSidebar(!sideBar)}
           className={
             sideBar
-              ? "overlay active h-full w-full fixed top-0 left-0 right-0 bottom-0 opacity-90 bg-[#4A4B5B] "
-              : "overlay h-[100vh] w-screen fixed top-0 left-0 right-0 bottom-0 opacity-90 bg-[#4A4B5B] "
+              ? "overlay active h-full w-full fixed top-0 left-0 right-0 bottom-0 opacity-90 bg-[#4A4B5B] z-30"
+              : "overlay h-[100vh] w-screen fixed top-0 left-0 right-0 bottom-0 opacity-90 bg-[#4A4B5B] z-30"
           }
         ></div>
         <div

@@ -5,11 +5,11 @@ import Footer from "../../components/Footer/Footer";
 
 const DefaultThemeplate = () => {
   return (
-    <div className="bg-[#F5F7F9]">
+    <div className="bg-[#F1F1F1]">
       <Header />
-      <div className="mt-[78px] h-[1000px]">
+      <>
         <Outlet />
-      </div>
+      </>
       <Footer />
     </div>
   );

@@ -1,0 +1,33 @@
+.btn-shop:hover{
+    background-color: #03041c;
+    color: white;
+}
+
+.btn-shop:hover .icon-arrow{
+    color: white;
+}
+.cicle-carousel{
+    transition: all .4s linear;
+    animation:grow-up 2s cubic-bezier(0.4, 0, 1, 1)  infinite 1s;
+}
+.cicle-carousel-1{
+    animation:grow-up 2s cubic-bezier(0.4, 0, 1, 1)  infinite 2s;
+
+}
+@keyframes grow-up {
+    0% { 
+        opacity: .8;
+        transform: scale(.8);
+    }
+    70%{
+        opacity: 1;
+    }
+    100% { 
+        opacity: 0;
+        transform: scale(1.2);
+    }  
+}
+
+.slick-slide:not(.slick-active){
+    overflow-x: hidden;
+}
