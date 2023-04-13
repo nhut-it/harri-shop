@@ -1,0 +1,10 @@
+.home-deal .heading .deal-title::before{
+    content: '';
+    position: absolute;
+    background-color: #F50963;
+    width: 2px;
+    height: 100%;
+    display: block;
+    top: 0;
+    left: -14px;
+}

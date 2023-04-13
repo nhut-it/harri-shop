@@ -1,0 +1,92 @@
+
+.countdown li{
+    position: relative;
+    font-size: 12px;
+}
+.countdown li::after{
+    content: '';
+    display: block;
+    width: 1px;
+    background: #ccc;
+    height: 20%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.countdown li:last-child::after{
+    display: none;
+}
+.dotted::before{
+    position: absolute;
+    content: "";
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+   
+    right: 50%;
+    z-index: 1;
+    bottom: auto;
+    top: -10%;
+    transform:translateX(50%) scaleY(-1);
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border: 2px solid #F9F9FA;
+    border-bottom: 0;
+    -webkit-clip-path: polygon(0 0,100% 0,100% 50%,0 50%);
+    clip-path: circle(50% at 50% 10%);
+}
+.dotted::after{
+    position: absolute;
+    content: "";
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    bottom: -13px;
+    right: 50%;
+    z-index: 1;
+    transform: translateX(50%);
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border: 2px solid #F9F9FA;
+    border-bottom: 0;
+    -webkit-clip-path: polygon(0 0,100% 0,100% 50%,0 50%);
+    clip-path: polygon(0 0,100% 0,100% 50%,0 50%);
+}
+.popover{
+    visibility: hidden;
+    transform: translateY(-10%);
+    position: absolute;
+    bottom:214%;
+    right: -40px;
+    opacity: 0;
+    transition: all .5s;
+}
+.coupon-text:hover .popover{
+    transform: translateY(0%);
+    visibility: visible;
+    transition: all .5s;
+    opacity: 1;
+}
+.popover::after{
+    content: '';
+    display: block;
+    top:90%;
+    right: 30px;
+    position: absolute;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid white;
+    
+}
+@media (max-width: 768px) {
+    .dotted::before{
+        top:-7%;
+    }
+}
+
+@media (max-width: 576px) {
+    .dotted::before{
+        top:-5%;
+    }
+}

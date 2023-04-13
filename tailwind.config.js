@@ -4,6 +4,7 @@ module.exports = {
     extend: {
       fontFamily: {
         space: ["Space Grotesk", "sans-serif"],
+        inter: ["Inter", "sans-serif"],
       },
       colors: {
         primary: "#F72C79",

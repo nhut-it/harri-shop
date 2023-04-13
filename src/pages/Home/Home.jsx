@@ -17,6 +17,7 @@ import watches from "../../assets/imgs/watches.webp";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 
 import CardProduct from "./CardProduct/CardProduct";
+import Deal from "./Deal/Deal";
 const Home = () => {
   return (
     <div>
@@ -122,9 +123,13 @@ const Home = () => {
             <TabPanel>
               <h2>Any content 2</h2>
             </TabPanel>
+            <TabPanel>
+              <h2>Any content 2</h2>
+            </TabPanel>
           </Tabs>
         </div>
       </div>
+      <Deal />
     </div>
   );
 };

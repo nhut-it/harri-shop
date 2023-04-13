@@ -21,7 +21,7 @@ const Header = () => {
   const [sideBar, setSidebar] = useState(false);
   const [plusSubMenu, setPlusSubMenu] = useState(false);
   const [stickyClass, setStickyClass] = useState("relative ");
-  console.log("stickyClass", stickyClass);
+  // console.log("stickyClass", stickyClass);
   useEffect(() => {
     window.addEventListener("scroll", stickNavbar);
 
@@ -32,7 +32,7 @@ const Header = () => {
 
   const stickNavbar = () => {
     if (window !== undefined) {
-      console.log("scroll", window.scrollY);
+      // console.log("scroll", window.scrollY);
 
       window.scrollY > 80
         ? setStickyClass("fixed top-0 left-0 z-50 w-full bg-white shadow-lg")
