@@ -10,6 +10,10 @@ module.exports = {
       colors: {
         primary: "#F50963",
         content: "#525258",
+        title: "#03041C",
+      },
+      backgroundImage: {
+        "home-banner": "url(/src/assets/imgs/banner-home.jpg)",
       },
       keyframes: {
         "rotate-plus": {
@@ -30,7 +34,7 @@ module.exports = {
       padding: {
         DEFAULT: "1rem",
         sm: "2rem",
-        lg: "2rem",
+        lg: "2.5rem",
         xl: "4rem",
         "2xl": "6rem",
       },

@@ -18,9 +18,10 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 
 import CardProduct from "./CardProduct/CardProduct";
 import Deal from "./Deal/Deal";
+import HomeBanner from "./HomeBanner/HomeBanner";
 const Home = () => {
   return (
-    <div>
+    <div className="bg-white">
       <HomeCarousel />
       <div className="slide-topic py-[100px]  bg-[#FFFF]">
         <div className="container mx-auto">
@@ -130,6 +131,9 @@ const Home = () => {
         </div>
       </div>
       <Deal />
+      <div className="home-banner ">
+        <HomeBanner />
+      </div>
     </div>
   );
 };
