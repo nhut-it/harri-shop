@@ -37,14 +37,6 @@ const CardDeal = () => {
     }
   };
 
-  const contentPopover = (
-    <p className="max-w-[245px] pt-[13px] pb-[15px] px-[20px]">
-      *This coupon code will apply on{" "}
-      <span className="text-black font-medium">Grocery type products</span> and
-      when you shopping more than{" "}
-      <span className="text-black font-medium">$500</span>
-    </p>
-  );
   return (
     <div className="card-deal p-[20px] border-[1px] flex md:flex-row flex-col justify-between md:items-center items-start relative ">
       <div className="voucher-info  flex sm:flex-row flex-col items-start sm:items-start">
@@ -66,7 +58,7 @@ const CardDeal = () => {
         </div>
       </div>
       <div className="dotted h-full  border-l-2 border-dashed absolute top-0 right-[20%] md:right-[40%] "></div>
-      <div className="coupon w-full md:w-auto text-center  text-[14px]  xl:pr-0 pr-[30px] xl:pr-[120px]">
+      <div className="coupon w-full md:w-auto text-center  text-[14px]  2xl:pr-[50px] pr-[30px] ">
         <p className="mb-[10px] coupon-text">
           <span>
             Coupon <span className="text-[#308830]">Active</span>{" "}

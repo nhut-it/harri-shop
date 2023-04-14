@@ -6,14 +6,9 @@ import "./HomeCarousel.css";
 import { motion } from "framer-motion";
 const HomeCarousel = () => {
   return (
-    <Carousel
-      // afterChange={onChange}
-      // autoplay={true}
-      dots={false}
-      // effect="scrollx"
-    >
-      <div className="slide">
-        <div className="h-[800px] grid grid-cols-1 md:grid-cols-2 container mx-auto ">
+    <Carousel autoplay={true} dots={false} effect="scrollx">
+      <div className="slide bg-[#F0F2EE]">
+        <div className="h-[800px] grid grid-cols-1 md:grid-cols-2 px-[10px] sm:container mx-auto ">
           <div className="carousel-content flex items-center">
             <div>
               <motion.p
@@ -58,8 +53,8 @@ const HomeCarousel = () => {
           </div>
         </div>
       </div>
-      <div>
-        <div className="h-[800px] grid grid-cols-1 md:grid-cols-2 container mx-auto">
+      <div className="bg-[#F0F2EE]">
+        <div className="h-[800px] grid grid-cols-1 md:grid-cols-2  px-[10px] sm:container mx-auto">
           <div className="carousel-content flex items-center">
             <div>
               <motion.p

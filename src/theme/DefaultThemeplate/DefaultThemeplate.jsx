@@ -18,7 +18,7 @@ const DefaultThemeplate = () => {
   });
 
   return (
-    <div className="bg-[#F1F1F1]">
+    <div className="bg-[#FFFF]">
       <motion.div
         whileHover={{
           transform: "translateY(-10px)",

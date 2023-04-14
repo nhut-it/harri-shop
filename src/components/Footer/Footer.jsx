@@ -8,7 +8,7 @@ import { Divider } from "antd";
 const Footer = () => {
   return (
     <div className="bg-[#FFFFFF] font-inter">
-      <div className="container mx-auto pt-[100px] pb-[40px]">
+      <div className="px-[10px] sm:px-auto sm:container mx-auto pt-[100px] pb-[40px]">
         <div className="grid grid-cols-1 sm:grid-cols-9 lg:grid-cols-12 gap-y-[50px] ">
           <div className="col-span-3">
             <img src={logo} alt="" className="mb-[15px]" />

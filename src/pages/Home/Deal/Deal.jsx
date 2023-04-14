@@ -4,7 +4,7 @@ import "./Deal.css";
 const Deal = () => {
   return (
     <div className="home-deal  bg-white py-[120px]">
-      <div className="container mx-auto ">
+      <div className="px-[10px] sm:px-auto sm:container mx-auto ">
         <div className="heading flex flex-col sm:flex-row justify-between sm:items-center mb-[30px]">
           <h2 className="deal-title text-[30px] font-medium relative leading-[1] mb-[40px] sm:mb-0">
             Deal of The Day

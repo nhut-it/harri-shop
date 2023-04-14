@@ -20,7 +20,7 @@ const { Panel } = Collapse;
 const Header = () => {
   const [sideBar, setSidebar] = useState(false);
   const [plusSubMenu, setPlusSubMenu] = useState(false);
-  const [stickyClass, setStickyClass] = useState("relative ");
+  const [stickyClass, setStickyClass] = useState("relative bg-[#F0F2EE]");
   // console.log("stickyClass", stickyClass);
   useEffect(() => {
     window.addEventListener("scroll", stickNavbar);
@@ -36,12 +36,12 @@ const Header = () => {
 
       window.scrollY > 80
         ? setStickyClass("fixed top-0 left-0 z-50 w-full bg-white shadow-lg")
-        : setStickyClass("relative");
+        : setStickyClass("relative bg-[#F0F2EE]");
     }
   };
   return (
     <header
-      className={`px-[12px] sm:px-[30px] h-[78px] border-b flex items-center  justify-between mx-auto xl:px-[60px] 2xl:px-[145px]  ${stickyClass}`}
+      className={`px-[12px]  sm:px-[30px] h-[78px] border-b flex items-center  justify-between mx-auto xl:px-[60px] 2xl:px-[145px]  ${stickyClass}`}
     >
       <a href="#">
         <img

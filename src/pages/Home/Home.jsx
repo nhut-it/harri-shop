@@ -19,12 +19,13 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import CardProduct from "./CardProduct/CardProduct";
 import Deal from "./Deal/Deal";
 import HomeBanner from "./HomeBanner/HomeBanner";
+import Feature from "./Feature/Feature";
 const Home = () => {
   return (
-    <div className="bg-white">
+    <div className="bg-white ">
       <HomeCarousel />
       <div className="slide-topic py-[100px]  bg-[#FFFF]">
-        <div className="container mx-auto">
+        <div className="px-[10px] sm:px-auto sm:container mx-auto">
           <Swiper
             slidesPerView={1}
             centeredSlides={false}
@@ -81,7 +82,7 @@ const Home = () => {
         </div>
       </div>
       <div className="home-productPopular bg-white pb-[20px]">
-        <div className="container mx-auto  ">
+        <div className="px-[10px] sm:px-auto sm:container mx-auto  ">
           <Tabs>
             <div className="flex  md:flex-row flex-col md:justify-between md:items-center pb-[30px]">
               <h2 className="text-[30px] mb-[40px] md:mb-0 font-bold pl-[10px] border-l-4 border-primary">
@@ -133,6 +134,9 @@ const Home = () => {
       <Deal />
       <div className="home-banner ">
         <HomeBanner />
+      </div>
+      <div className="feature pt-[80px] pb-[20px]">
+        <Feature />
       </div>
     </div>
   );
