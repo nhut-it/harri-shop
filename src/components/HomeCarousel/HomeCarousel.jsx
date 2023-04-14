@@ -6,11 +6,11 @@ import "./HomeCarousel.css";
 import { motion } from "framer-motion";
 const HomeCarousel = () => {
   return (
-    <Carousel autoplay={true} dots={false} effect="scrollx">
+    <Carousel autoplay={false} dots={false} effect="scrollx">
       <div className="slide bg-[#F0F2EE]">
         <div className="h-[800px] grid grid-cols-1 md:grid-cols-2 px-[10px] sm:container mx-auto ">
           <div className="carousel-content flex items-center">
-            <div>
+            <div className="z-10">
               <motion.p
                 initial={{ y: 30, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
@@ -43,12 +43,12 @@ const HomeCarousel = () => {
             </div>
           </div>
           <div className="carousel-img flex items-end relative ">
-            <span className="absolute top-[10%] right-[-10%]  sm:top-[20%] sm:right-[-10%] -z-10 cicle-carousel bg-white rounded-full h-[500px] w-[500px] sm:w-[550px] sm:h-[550px] "></span>
-            <span className="absolute top-[10%] right-[-10%]  sm:top-[20%] sm:right-[-10%] -z-10 cicle-carousel-1 bg-white rounded-full h-[500px] w-[500px] sm:w-[550px] sm:h-[550px] "></span>
+            <span className="absolute top-[10%] right-[-10%]  sm:top-[20%] sm:right-[-10%]  cicle-carousel bg-white rounded-full h-[500px] w-[500px] sm:w-[550px] sm:h-[550px] "></span>
+            <span className="absolute top-[10%] right-[-10%]  sm:top-[20%] sm:right-[-10%]  cicle-carousel-1 bg-white rounded-full h-[500px] w-[500px] sm:w-[550px] sm:h-[550px] "></span>
             <img
               src={slider}
               alt="carousel slider harri shop"
-              className="w-[300px]   sm:w-full mt-auto ml-auto"
+              className="w-[300px]   sm:w-full  ml-auto z-10"
             />
           </div>
         </div>
