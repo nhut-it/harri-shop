@@ -41,7 +41,7 @@ const Header = () => {
   };
   return (
     <header
-      className={`px-[30px] h-[78px] border-b flex items-center  justify-between mx-auto xl:px-[60px] 2xl:px-[145px]  ${stickyClass}`}
+      className={`px-[12px] sm:px-[30px] h-[78px] border-b flex items-center  justify-between mx-auto xl:px-[60px] 2xl:px-[145px]  ${stickyClass}`}
     >
       <a href="#">
         <img

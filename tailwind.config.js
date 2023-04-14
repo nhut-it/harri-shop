@@ -8,7 +8,7 @@ module.exports = {
         roboto: ["Roboto", "sans-serif"],
       },
       colors: {
-        primary: "#F72C79",
+        primary: "#F50963",
         content: "#525258",
       },
       keyframes: {
@@ -30,8 +30,8 @@ module.exports = {
       padding: {
         DEFAULT: "1rem",
         sm: "2rem",
-        lg: "4rem",
-        xl: "5rem",
+        lg: "2rem",
+        xl: "4rem",
         "2xl": "6rem",
       },
     },
