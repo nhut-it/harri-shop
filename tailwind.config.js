@@ -5,6 +5,7 @@ module.exports = {
       fontFamily: {
         space: ["Space Grotesk", "sans-serif"],
         inter: ["Inter", "sans-serif"],
+        roboto: ["Roboto", "sans-serif"],
       },
       colors: {
         primary: "#F72C79",
