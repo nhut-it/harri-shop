@@ -14,6 +14,7 @@ module.exports = {
       },
       backgroundImage: {
         "home-banner": "url(/src/assets/imgs/banner-home.jpg)",
+        "home-subcribe": "url(/src/assets/imgs/subcribe.jpg)",
       },
       keyframes: {
         "rotate-plus": {
@@ -33,7 +34,7 @@ module.exports = {
     container: {
       padding: {
         DEFAULT: "1rem",
-        sm: "2rem",
+        sm: "1rem",
         lg: "2.5rem",
         xl: "4rem",
         "2xl": "6rem",
