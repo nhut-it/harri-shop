@@ -16,6 +16,7 @@ import bgSidebar from "../../assets/imgs/bg-sidebar.webp";
 import { motion } from "framer-motion";
 import { Badge, Collapse, Divider } from "antd";
 import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 const { Panel } = Collapse;
 const Header = () => {
   const [sideBar, setSidebar] = useState(false);
@@ -53,92 +54,89 @@ const Header = () => {
       <nav className="nav-menu flex-2 font-space text-[15px] mr-auto hidden lg:block">
         <ul className="list-menu flex pl-[45px] font-medium items-center">
           <li className="nav-link pl-[30px] cursor-pointer leading-[78px] parent ">
-            <a href="#" className="text-content  transition duration-200 ">
+            <NavLink to="/" className="text-content  transition duration-200 ">
               Home
-            </a>
+            </NavLink>
           </li>
           <li className="nav-link pl-[30px] cursor-pointer leading-[78px]">
-            <a
-              href="#"
+            <NavLink
+              to="about"
               className="text-content hover:text-primary transition duration-200 "
             >
               About Us
-            </a>
+            </NavLink>
           </li>
           <li className="nav-link pl-[30px] cursor-pointer leading-[78px]">
-            <a
+            <NavLink
               href="#"
               className="text-content hover:text-primary transition duration-200 "
             >
               Shop
-            </a>
+            </NavLink>
           </li>
 
           <li className="nav-link text-content pl-[30px] hover:last:text-red-300 relative  cursor-pointer leading-[78px]">
-            <a href="#">
+            <NavLink href="#">
               Pages <MdKeyboardArrowDown className="inline" />
-            </a>
+            </NavLink>
             <motion.ul className="min-w-[200px] z-50  shadow-lg font-normal sub-menu text-content bg-white pl-[25px] pt-[25px]  pb-[25px] absolute top-full leading-[26px] text-[15px]">
               <li>
-                <a href="#" className="text-[14px]">
+                <NavLink href="#" className="text-[14px]">
                   FAQs
-                </a>
+                </NavLink>
               </li>
               <li>
-                <a href="#" className="text-[14px]">
+                <NavLink href="#" className="text-[14px]">
                   Privacy & Policy
-                </a>
+                </NavLink>
               </li>
               <li>
-                <a href="#" className="text-[14px]">
+                <NavLink href="#" className="text-[14px]">
                   Terms & Conditions
-                </a>
+                </NavLink>
               </li>
               <li>
-                <a href="#" className="text-[14px]">
+                <NavLink href="#" className="text-[14px]">
                   Login
-                </a>
+                </NavLink>
               </li>
               <li>
-                <a href="#" className="text-[14px]">
+                <NavLink href="#" className="text-[14px]">
                   Register
-                </a>
+                </NavLink>
               </li>
               <li>
-                <a href="#" className="text-[14px]">
+                <NavLink href="#" className="text-[14px]">
                   Forgot Password
-                </a>
+                </NavLink>
               </li>
               <li>
-                <a href="#" className="text-[14px]">
+                <NavLink href="#" className="text-[14px]">
                   My Cart
-                </a>
+                </NavLink>
               </li>
               <li>
-                <a href="#" className="text-[14px]">
+                <NavLink href="#" className="text-[14px]">
                   My Wishlist
-                </a>
+                </NavLink>
               </li>
               <li>
-                <a href="#" className="text-[14px]">
+                <NavLink href="#" className="text-[14px]">
                   Checkout
-                </a>
+                </NavLink>
               </li>
               <li>
-                <a href="#" className="text-[14px]">
+                <NavLink href="#" className="text-[14px]">
                   Error 404
-                </a>
+                </NavLink>
               </li>
             </motion.ul>
           </li>
 
           <li className="nav-link pl-[30px] cursor-pointer leading-[78px]">
-            <a
-              href="#"
-              className="text-content hover:text-primary transition duration-200"
-            >
+            <NavLink className="text-content hover:text-primary transition duration-200">
               contact Us
-            </a>
+            </NavLink>
           </li>
         </ul>
       </nav>

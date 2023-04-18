@@ -15,6 +15,7 @@ module.exports = {
       backgroundImage: {
         "home-banner": "url(/src/assets/imgs/banner-home.jpg)",
         "home-subcribe": "url(/src/assets/imgs/subcribe.jpg)",
+        "about-banner": "url(/src/assets/imgs/banner-about.jpg)",
       },
       keyframes: {
         "rotate-plus": {
