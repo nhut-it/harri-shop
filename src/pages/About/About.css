@@ -66,3 +66,37 @@
     display: block;
 }
 }
+
+/* AWARD */
+.award-item::after{
+    content: '';
+    display: block;
+    width: 0;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background-image: linear-gradient(329deg,#ff91fa 13.55%,#fa6490 48.54%,#f7d86a 86.44%);
+    transform: matrix(-1,0,0,1,0,0);
+    opacity: 0;
+    transition: all linear .8s;
+}
+.award-item:hover::after{
+    width: 100%;
+    left: 0;
+    opacity: 1;
+}
+
+.awards .award-item-title::after{
+    content: '';
+    display: block;
+    position:absolute;
+    height: 2px;
+    background: #000;
+    width: 0%;
+    left: 0;
+}
+.awards .award-item-title:hover::after{
+    width: 100%;
+    transition: all .5s;
+}

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { BsArrowUpRight } from "react-icons/bs";
+import { BsArrowUpRight, BsArrowRight } from "react-icons/bs";
 import { RiUserHeartLine } from "react-icons/ri";
 import { BiSupport } from "react-icons/bi";
 import { RxCookie } from "react-icons/rx";
@@ -171,6 +171,97 @@ const About = () => {
               />
             </SwiperSlide>
           </Swiper>
+        </div>
+      </div>
+      <div className="awards font-syne pt-[120px]">
+        <div className="px-[10px] sm:container  mx-auto">
+          <h2 className="title text-[60px] font-space font-bold text-center mb-[55px]">
+            Our Awards.
+          </h2>
+          <div className="award-item border-t-[1px] broder-[#eaeaef] pt-[40px] pb-[43px] flex flex-col sm:flex-row justify-between sm:items-center relative">
+            <div className="sm:basis-[284px] mb-[10px] sm:mb-0">
+              <h4 className="text-[18px] ">FREE SHIPPING</h4>
+            </div>
+            <div className="grow">
+              <h3 className="award-item-title font-syne relative inline-block leading-[1] text-[30px] font-bold">
+                Modern painting award jump
+              </h3>
+              <p className="text-[16px] text-content">
+                Runner Up - “ Decor of the week “
+              </p>
+            </div>
+            <span className="inline-block">
+              <a
+                href="#"
+                className="hover:text-primary transition duration-300 inline-block"
+              >
+                <BsArrowRight className="text-[25px]" />
+              </a>
+            </span>
+          </div>
+          <div className="award-item  border-t-[1px] broder-[#eaeaef] pt-[40px] pb-[43px] flex flex-col sm:flex-row justify-between sm:items-center relative">
+            <div className="sm:basis-[284px] mb-[10px] sm:mb-0">
+              <h4 className="text-[18px] ">FREE RETURN</h4>
+            </div>
+            <div className="grow">
+              <h3 className=" award-item-title font-syne relative inline-block leading-[1] text-[30px] font-bold">
+                People's choice: best design
+              </h3>
+              <p className="text-[16px] text-content">
+                Runner Up - “ Decor of the week “
+              </p>
+            </div>
+            <span className="inline-block">
+              <a
+                href="#"
+                className="hover:text-primary transition duration-300 inline-block"
+              >
+                <BsArrowRight className="text-[25px]" />
+              </a>
+            </span>
+          </div>
+          <div className="award-item border-t-[1px] broder-[#eaeaef] pt-[40px] pb-[43px] flex flex-col sm:flex-row justify-between sm:items-center relative">
+            <div className="sm:basis-[284px] mb-[10px] sm:mb-0">
+              <h4 className="text-[18px] ">SECURE PAYMENT</h4>
+            </div>
+            <div className="grow">
+              <h3 className=" award-item-title font-syne relative inline-block leading-[1] text-[30px] font-bold">
+                Webby's, Site of the Year
+              </h3>
+              <p className="text-[16px] text-content">
+                Runner Up - “ Decor of the week “
+              </p>
+            </div>
+            <span className="inline-block">
+              <a
+                href="#"
+                className="hover:text-primary transition duration-300 inline-block"
+              >
+                <BsArrowRight className="text-[25px]" />
+              </a>
+            </span>
+          </div>
+          <div className="award-item border-t-[1px] broder-[#eaeaef] pt-[40px] pb-[43px] flex flex-col sm:flex-row justify-between sm:items-center relative">
+            <div className="sm:basis-[284px] mb-[10px] sm:mb-0">
+              <h4 className="text-[18px] ">BEST QUALITY</h4>
+            </div>
+            <div className="grow">
+              <h3 className=" award-item-title font-syne relative inline-block leading-[1] text-[30px] font-bold">
+                Awwwards site of the day
+              </h3>
+              <p className="text-[16px] text-content">
+                Runner Up - “ Decor of the week “
+              </p>
+            </div>
+            <span className="inline-block">
+              <a
+                href="#"
+                className="hover:text-primary transition duration-300 inline-block"
+              >
+                <BsArrowRight className="text-[25px]" />
+              </a>
+            </span>
+          </div>
         </div>
       </div>
     </div>

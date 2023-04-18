@@ -6,6 +6,7 @@ module.exports = {
         space: ["Space Grotesk", "sans-serif"],
         inter: ["Inter", "sans-serif"],
         roboto: ["Roboto", "sans-serif"],
+        syne: ["Syne", "sans-serif"],
       },
       colors: {
         primary: "#F50963",
