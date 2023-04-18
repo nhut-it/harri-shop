@@ -17,6 +17,7 @@ module.exports = {
         "home-banner": "url(/src/assets/imgs/banner-home.jpg)",
         "home-subcribe": "url(/src/assets/imgs/subcribe.jpg)",
         "about-banner": "url(/src/assets/imgs/banner-about.jpg)",
+        "about-fqa": "url(/src/assets/imgs/faq-video.jpg)",
       },
       keyframes: {
         "rotate-plus": {
