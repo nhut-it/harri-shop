@@ -7,13 +7,19 @@ import { RxCookie } from "react-icons/rx";
 import { HiOutlineMinusSm } from "react-icons/hi";
 import { AiOutlinePlus, AiOutlineArrowRight } from "react-icons/ai";
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import Slider from "react-slick";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 import { Navigation, Pagination } from "swiper";
-
+import brand2 from "../../assets/imgs/brand-2.webp";
+import brand3 from "../../assets/imgs/brand-3.webp";
+import brand4 from "../../assets/imgs/brand-4.webp";
+import brand5 from "../../assets/imgs/brand-5.webp";
+import brand6 from "../../assets/imgs/brand-6.webp";
+import brand7 from "../../assets/imgs/brand-7.webp";
+import brand8 from "../../assets/imgs/brand-8.webp";
 import "./About.css";
 import slide1 from "../../assets/imgs/about-gallery-slider-1.webp";
 import bgfqa from "../../assets/imgs/faq-video.jpg";
@@ -44,6 +50,74 @@ const About = () => {
   const handleCancel = () => {
     console.log("Clicked cancel button");
     setOpen(false);
+  };
+
+  const settings = {
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 3000,
+    autoplaySpeed: 3000,
+    cssEase: "linear",
+    centerPadding: "24px",
+
+    responsive: [
+      {
+        breakpoint: 1400,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 3,
+          // infinite: true,
+          centerPadding: "24px",
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          // infinite: true,
+          centerPadding: "24px",
+        },
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          centerPadding: "24px",
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 2,
+          initialSlide: 2,
+          centerPadding: "24px",
+        },
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 3,
+          infinite: true,
+          centerPadding: "24px",
+        },
+      },
+
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerPadding: "10px",
+        },
+      },
+    ],
   };
   return (
     <div>
@@ -477,6 +551,160 @@ const About = () => {
               />
             </SwiperSlide>
           </Swiper>
+        </div>
+      </div>
+      <div className="brand overflow-hidden pt-[110px]">
+        {/* <Slider dots="true" slidesToShow={3}>
+         
+         
+        </Slider> */}
+        <div className="mb-[10px]">
+          <Slider {...settings}>
+            <div>
+              {" "}
+              <div className="w-[90%] mx-auto  border-[1px] h-[160px] flex items-center justify-center rounded-lg">
+                <img
+                  src={brand2}
+                  alt=""
+                  className=" mx-auto w-[50%] lg:w-auto"
+                />
+              </div>
+            </div>
+            <div>
+              {" "}
+              <div className="w-[90%] mx-auto  border-[1px] h-[160px] flex items-center justify-center rounded-lg">
+                <img
+                  src={brand3}
+                  alt=""
+                  className=" mx-auto w-[50%] lg:w-auto"
+                />
+              </div>
+            </div>
+            <div>
+              {" "}
+              <div className="w-[90%] mx-auto  border-[1px] h-[160px] flex items-center justify-center rounded-lg">
+                <img
+                  src={brand4}
+                  alt=""
+                  className=" mx-auto w-[50%] lg:w-auto"
+                />
+              </div>
+            </div>
+            <div>
+              {" "}
+              <div className="w-[90%] mx-auto  border-[1px] h-[160px] flex items-center justify-center rounded-lg">
+                <img
+                  src={brand5}
+                  alt=""
+                  className=" mx-auto w-[50%] lg:w-auto"
+                />
+              </div>
+            </div>
+            <div>
+              {" "}
+              <div className="w-[90%] mx-auto  border-[1px] h-[160px] flex items-center justify-center rounded-lg">
+                <img
+                  src={brand6}
+                  alt=""
+                  className=" mx-auto w-[50%] lg:w-auto"
+                />
+              </div>
+            </div>
+            <div>
+              {" "}
+              <div className="w-[90%] mx-auto  border-[1px] h-[160px] flex items-center justify-center rounded-lg">
+                <img
+                  src={brand7}
+                  alt=""
+                  className=" mx-auto w-[50%] lg:w-auto"
+                />
+              </div>
+            </div>
+            <div>
+              {" "}
+              <div className="w-[90%] mx-auto  border-[1px] h-[160px] flex items-center justify-center rounded-lg">
+                <img
+                  src={brand8}
+                  alt=""
+                  className=" mx-auto w-[50%] lg:w-auto"
+                />
+              </div>
+            </div>
+          </Slider>
+        </div>
+        <div>
+          <Slider {...settings} rtl="true">
+            <div>
+              {" "}
+              <div className="w-[90%] mx-auto  border-[1px] h-[160px] flex items-center justify-center rounded-lg">
+                <img
+                  src={brand2}
+                  alt=""
+                  className=" mx-auto w-[50%] lg:w-auto"
+                />
+              </div>
+            </div>
+            <div>
+              {" "}
+              <div className="w-[90%] mx-auto  border-[1px] h-[160px] flex items-center justify-center rounded-lg">
+                <img
+                  src={brand3}
+                  alt=""
+                  className=" mx-auto w-[50%] lg:w-auto"
+                />
+              </div>
+            </div>
+            <div>
+              {" "}
+              <div className="w-[90%] mx-auto  border-[1px] h-[160px] flex items-center justify-center rounded-lg">
+                <img
+                  src={brand4}
+                  alt=""
+                  className=" mx-auto w-[50%] lg:w-auto"
+                />
+              </div>
+            </div>
+            <div>
+              {" "}
+              <div className="w-[90%] mx-auto  border-[1px] h-[160px] flex items-center justify-center rounded-lg">
+                <img
+                  src={brand5}
+                  alt=""
+                  className=" mx-auto w-[50%] lg:w-auto"
+                />
+              </div>
+            </div>
+            <div>
+              {" "}
+              <div className="w-[90%] mx-auto  border-[1px] h-[160px] flex items-center justify-center rounded-lg">
+                <img
+                  src={brand6}
+                  alt=""
+                  className=" mx-auto w-[50%] lg:w-auto"
+                />
+              </div>
+            </div>
+            <div>
+              {" "}
+              <div className="w-[90%] mx-auto  border-[1px] h-[160px] flex items-center justify-center rounded-lg">
+                <img
+                  src={brand7}
+                  alt=""
+                  className=" mx-auto w-[50%] lg:w-auto"
+                />
+              </div>
+            </div>
+            <div>
+              {" "}
+              <div className="w-[90%] mx-auto  border-[1px] h-[160px] flex items-center justify-center rounded-lg">
+                <img
+                  src={brand8}
+                  alt=""
+                  className=" mx-auto w-[50%] lg:w-auto"
+                />
+              </div>
+            </div>
+          </Slider>
         </div>
       </div>
     </div>
