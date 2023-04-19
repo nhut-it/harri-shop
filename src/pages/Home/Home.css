@@ -1,13 +1,13 @@
  /* swiper slide category section */
 
- .swiper .swiper-scrollbar{
+ .slide-topic .swiper .swiper-scrollbar{
     height: 2px;
    
  }
- .swiper .swiper-scrollbar .swiper-scrollbar-drag{
+ .slide-topic  .swiper .swiper-scrollbar .swiper-scrollbar-drag{
     background-color: #F72C79 ;
  }
- .swiper .swiper-wrapper{
+ .slide-topic  .swiper .swiper-wrapper{
     padding-bottom: 42px !important;
  }
 
