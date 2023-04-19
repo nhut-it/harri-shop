@@ -31,6 +31,7 @@ import team3 from "../../assets/imgs/team-3.webp";
 import team4 from "../../assets/imgs/team-4.webp";
 import team5 from "../../assets/imgs/team-5.webp";
 import team6 from "../../assets/imgs/team-6.webp";
+import FormSubscribe from "../../components/FormSubscribe/FormSubscribe";
 const { Panel } = Collapse;
 const About = () => {
   const [open, setOpen] = useState(false);
@@ -706,6 +707,9 @@ const About = () => {
             </div>
           </Slider>
         </div>
+      </div>
+      <div className="subcribe mt-[120px] bg-home-subcribe py-[50px] bg-no-repeat bg-center bg-cover">
+        <FormSubscribe />
       </div>
     </div>
   );

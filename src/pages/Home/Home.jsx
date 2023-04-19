@@ -20,6 +20,7 @@ import CardProduct from "./CardProduct/CardProduct";
 import Deal from "./Deal/Deal";
 import HomeBanner from "./HomeBanner/HomeBanner";
 import Feature from "./Feature/Feature";
+import FormSubscribe from "../../components/FormSubscribe/FormSubscribe";
 const Home = () => {
   return (
     <div className="bg-white ">
@@ -139,7 +140,7 @@ const Home = () => {
         <Feature />
       </div>
       <div className="subcribe bg-home-subcribe py-[50px] bg-no-repeat bg-center bg-cover">
-        <div className="px-[10px] sm:px-0 sm:px-auto sm:container mx-auto">
+        {/* <div className="px-[10px] sm:px-0 sm:px-auto sm:container mx-auto">
           <div className="py-[20px] px-[30px] sm:py-[60px] sm:px-[70px] bg-white lg:flex justify-between items-center">
             <h2 className="text-[34px] mb-[30px] lg:mb-0 font-bold  leading-[1.4] grow basis-[50%] lg:max-w-[400px]">
               Subscribe for Latest Trends & Offers
@@ -160,7 +161,8 @@ const Home = () => {
               </button>
             </form>
           </div>
-        </div>
+        </div> */}
+        <FormSubscribe />
       </div>
     </div>
   );
