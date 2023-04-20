@@ -68,6 +68,7 @@ const Header = ({ bgHeader }) => {
           </li>
           <li className="nav-link pl-[30px] cursor-pointer leading-[78px]">
             <NavLink
+              to="shop"
               href="#"
               className="text-content hover:text-primary transition duration-200 "
             >

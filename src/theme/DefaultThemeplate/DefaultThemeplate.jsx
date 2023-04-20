@@ -17,10 +17,10 @@ const DefaultThemeplate = () => {
       window.addEventListener("scroll", scrollToTop);
     }
     console.log("location", location);
-    if (location === "/contact") {
-      setBgheader("bg-white");
-    } else {
+    if (location === "/") {
       setBgheader("");
+    } else {
+      setBgheader("bg-white");
     }
     return () => window.removeEventListener("scroll", scrollToTop);
   });
