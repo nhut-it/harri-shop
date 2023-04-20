@@ -1,18 +1,26 @@
 import React, { useEffect, useState } from "react";
 import Header from "../../components/Header/Header";
-import { Outlet } from "react-router-dom";
+import { Outlet, useHref, useLocation } from "react-router-dom";
 import Footer from "../../components/Footer/Footer";
 import { MdOutlineKeyboardArrowUp } from "react-icons/md";
 import { motion } from "framer-motion";
 import "./DefaultThemeplate.css";
 const DefaultThemeplate = () => {
   const [showBtnTop, setshowBtnTop] = useState("");
+  const [bgHeader, setBgheader] = useState("");
+  const location = useHref();
   const scrollToTop = () => {
     window.scrollY > 100 ? setshowBtnTop("show ") : setshowBtnTop("");
   };
   useEffect(() => {
     if (window !== undefined) {
       window.addEventListener("scroll", scrollToTop);
+    }
+    console.log("location", location);
+    if (location === "/contact") {
+      setBgheader("bg-white");
+    } else {
+      setBgheader("");
     }
     return () => window.removeEventListener("scroll", scrollToTop);
   });
@@ -28,7 +36,7 @@ const DefaultThemeplate = () => {
       >
         <MdOutlineKeyboardArrowUp className="text-white text-[25px]" />
       </motion.div>
-      <Header />
+      <Header bgHeader={bgHeader} />
       <>
         <Outlet />
       </>

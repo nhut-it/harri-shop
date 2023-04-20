@@ -18,7 +18,7 @@ import { Badge, Collapse, Divider } from "antd";
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 const { Panel } = Collapse;
-const Header = () => {
+const Header = ({ bgHeader }) => {
   const [sideBar, setSidebar] = useState(false);
   const [plusSubMenu, setPlusSubMenu] = useState(false);
   const [stickyClass, setStickyClass] = useState("relative bg-[#F0F2EE]");
@@ -42,7 +42,7 @@ const Header = () => {
   };
   return (
     <header
-      className={`px-[12px]  sm:px-[30px] h-[78px] border-b flex items-center  justify-between mx-auto xl:px-[60px] 2xl:px-[145px]  ${stickyClass}`}
+      className={`px-[12px] ${bgHeader}  sm:px-[30px] h-[78px] border-b flex items-center  justify-between mx-auto xl:px-[60px] 2xl:px-[145px]  ${stickyClass}`}
     >
       <a href="#">
         <img
@@ -134,15 +134,18 @@ const Header = () => {
           </li>
 
           <li className="nav-link pl-[30px] cursor-pointer leading-[78px]">
-            <NavLink className="text-content hover:text-primary transition duration-200">
+            <NavLink
+              to="contact"
+              className="text-content hover:text-primary transition duration-200"
+            >
               contact Us
             </NavLink>
           </li>
         </ul>
       </nav>
       <div className="header-action flex items-center relative ml-auto">
-        <ul className="list-action  pr-5 hidden md:flex">
-          <li className="pr-[15px] text-xl">
+        <ul className="list-action  pr-5  flex">
+          <li className="pr-[15px] text-xl hidden sm:block">
             <a
               href="#"
               className="text-[#525258] hover:text-black duration-200 transition"
