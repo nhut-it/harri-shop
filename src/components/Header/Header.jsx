@@ -117,7 +117,7 @@ const Header = ({ bgHeader }) => {
                 </NavLink>
               </li>
               <li>
-                <NavLink href="#" className="text-[14px]">
+                <NavLink to="wishlist" href="#" className="text-[14px]">
                   My Wishlist
                 </NavLink>
               </li>
@@ -168,14 +168,15 @@ const Header = ({ bgHeader }) => {
           </li>
           <li className="pr-[15px] text-xl">
             <Badge count={0} showZero size="default" color="#F72C79">
-              <a
+              <NavLink
+                to="wishlist"
                 href="#"
                 className="text-[#525258] text-xl hover:text-black duration-200 transition"
               >
                 <div className="wishlist-action">
                   <AiOutlineHeart />
                 </div>
-              </a>
+              </NavLink>
             </Badge>
           </li>
           <li className="text-xl">

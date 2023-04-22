@@ -1,0 +1,45 @@
+.shop-page .sidebar-sort .list-collapse .li:hover a {
+ color: #F50963 !important;
+}
+.shop-page :where(.css-dev-only-do-not-override-1vtf12y) a{
+ color: inherit;
+}
+.shop-page .shop-page .list-collapse .ant-collapse-content-box{
+ padding-bottom: 10px !important;
+}
+ 
+.shop-page :where(.css-dev-only-do-not-override-1vtf12y).ant-collapse .ant-collapse-content>.ant-collapse-content-box{
+ padding-bottom: 0 !important;
+}
+
+.brands .check-brand,
+.brands .check-brand-1{
+ width: 18px;
+ height: 18px;
+ position: relative;
+ border: 1px solid #000;
+ display: inline-block;
+ margin-right: 10px;
+ text-align: center;
+ transition: all .5s;
+
+}
+
+.brands .check-brand::after,
+.brands .check-brand-1::after{
+ content: '';
+ width: 5px;
+ height: 8px;
+ border: 2px solid white;
+ top: 50%;
+ left: 50%;
+ position: absolute;
+ display: inline-block;
+ transform: translate(-50%,-50%) rotate(30deg);
+ border-top: 0;
+ border-left: 0;
+}
+.brands .sidebar-sort input[type='checkbox']:checked + label {
+ background-color: #000;
+ border: #F50963;
+}

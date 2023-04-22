@@ -426,6 +426,7 @@ const About = () => {
                 )
               }
               expandIconPosition="end"
+              bordered={false}
             >
               <Panel
                 header="Can I cancel my account at any time?"

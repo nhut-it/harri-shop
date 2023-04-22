@@ -32,7 +32,7 @@ const Breadcrumb = ({ url }) => {
   };
 
   return (
-    <div>
+    <>
       <ul className="flex text-content text-[14px]">
         <li className="">
           <AiOutlineHome className="inline mr-1 translate-y-[-3px]" />
@@ -42,7 +42,7 @@ const Breadcrumb = ({ url }) => {
         </li>
         {renderLink()}
       </ul>
-    </div>
+    </>
   );
 };
 
