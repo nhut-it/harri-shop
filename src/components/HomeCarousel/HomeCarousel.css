@@ -7,16 +7,17 @@
     color: white;
 }
 .cicle-carousel{
-    transition: all .4s linear;
-    animation:grow-up 2s cubic-bezier(0.4, 0, 1, 1)  infinite 1s;
+    transition: all .4s ease-out;
+    animation:grow-up 3s cubic-bezier(0.4, 0, 1, 1)  infinite ;
 }
 .cicle-carousel-1{
-    animation:grow-up 2s cubic-bezier(0.4, 0, 1, 1)  infinite 2s;
+    transition: all .4s ease-out;
+    animation:grow-up 3s cubic-bezier(0.4, 0, 1, 1)  infinite 1s;
 
 }
 @keyframes grow-up {
     0% { 
-        opacity: .8;
+        opacity: 0;
         transform: scale(.8);
     }
     70%{
@@ -24,7 +25,7 @@
     }
     100% { 
         opacity: 0;
-        transform: scale(1.2);
+        transform: scale(1.3);
     }  
 }
 

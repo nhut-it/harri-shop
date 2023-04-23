@@ -134,7 +134,7 @@ const Contact = () => {
                     name="name"
                     id=""
                     placeholder="Enter your name"
-                    className="px-[25px] bg-[#f5f5f8] text-[16px] h-[60px] w-full focus:outline-primary focus:outline-1 border-[1px] focus:bg-white
+                    className="px-[25px] bg-[#f5f5f8] text-[16px] h-[60px] w-full focus:outline-primary focus:outline-1 focus:outline border-[1px] focus:bg-white
                     duration-500 transition
                     "
                   />
@@ -145,7 +145,7 @@ const Contact = () => {
                     name="email"
                     id=""
                     placeholder="Enter your email"
-                    className="px-[25px] bg-[#f5f5f8] text-[16px] h-[60px] w-full focus:outline-primary focus:outline-1 border-[1px] focus:bg-white
+                    className="px-[25px] bg-[#f5f5f8] text-[16px] h-[60px] w-full focus:outline-primary focus:outline focus:outline-1 border-[1px] focus:bg-white
                     duration-500 transition
                     "
                   />
@@ -156,7 +156,7 @@ const Contact = () => {
                     name="name"
                     id=""
                     placeholder="Mobile no"
-                    className="px-[25px] bg-[#f5f5f8] text-[16px] h-[60px] w-full focus:outline-primary focus:outline-1 border-[1px] focus:bg-white
+                    className="px-[25px] bg-[#f5f5f8] text-[16px] h-[60px] w-full focus:outline-primary focus:outline focus:outline-1 border-[1px] focus:bg-white
                     duration-500 transition
                     "
                   />
@@ -167,7 +167,7 @@ const Contact = () => {
                     name="name"
                     id=""
                     placeholder="Company"
-                    className="px-[25px] bg-[#f5f5f8] text-[16px] h-[60px] w-full focus:outline-primary focus:outline-1 border-[1px] focus:bg-white
+                    className="px-[25px] bg-[#f5f5f8] text-[16px] h-[60px] w-full focus:outline-primary focus:outline focus:outline-1 border-[1px] focus:bg-white
                     duration-500 transition
                     "
                   />
@@ -179,7 +179,7 @@ const Contact = () => {
                     cols="30"
                     rows="10"
                     placeholder="Your Message"
-                    className="px-[25px] pt-[20px] bg-[#f5f5f8] text-[16px]  w-full focus:outline-primary focus:outline-1 border-[1px] focus:bg-white
+                    className="px-[25px] pt-[20px] bg-[#f5f5f8] text-[16px]  w-full focus:outline-primary  outline-content focus:outline-1 focus:outline  border-[1px] focus:bg-white
                   duration-500 transition
                   "
                   ></textarea>

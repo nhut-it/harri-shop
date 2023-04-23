@@ -8,6 +8,7 @@ module.exports = {
         roboto: ["Roboto", "sans-serif"],
         syne: ["Syne", "sans-serif"],
       },
+
       colors: {
         primary: "#F50963",
         content: "#525258",
