@@ -1,0 +1,28 @@
+
+.sidebar-content .sidebar-wrapper .close-btn:hover .icon-close{
+ color: white;
+ 
+}
+.sidebar-content .follow .list-social li:hover {
+ background-color: #F72C79;
+ color: white;
+ border-color: #F72C79;
+}
+.sidebar-content::-webkit-scrollbar{
+ display: none;
+}
+.menu-sidebar .overlay{display: none;}
+.menu-sidebar .overlay.active{
+ display: block;
+}
+.menu-sidebar .sidebar-content{
+ visibility: hidden;
+ opacity: 0;
+ transform: translateX(100%);
+ transition: all .5s ease-in-out;
+}
+.menu-sidebar .sidebar-content.active{
+ visibility: visible;
+ opacity: 1;
+ transform: translateX(0%);
+}

@@ -78,7 +78,7 @@
 .navbar:hover :last-child{
     transform: translateX(-5px);
 }
-
+/* 
 .sidebar-content .sidebar-wrapper .close-btn:hover .icon-close{
     color: white;
     
@@ -105,7 +105,7 @@
     visibility: visible;
     opacity: 1;
     transform: translateX(0%);
-}
+} */
 /* "menu-sidebar active h-[100vh] w-screen fixed top-0 left-0 right-0 bottom-0 opacity-90 bg-[#4A4B5B] " */
 
 .ant-collapse-header {

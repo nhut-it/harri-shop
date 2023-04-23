@@ -27,7 +27,7 @@ const Wishlist = () => {
         </div>
       </div>
       <div className="py-[100px] ">
-        <div className="sm:container mx-auto px-[10px] overflow-x-auto">
+        <div className="sm:container mx-auto px-[10px] overflow-x-auto ">
           <div className="py-[17px]  px-[37px] bg-[#F1F1F1] font-space mb-[30px]">
             <NavLink
               to="/shop"
