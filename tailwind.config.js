@@ -8,7 +8,9 @@ module.exports = {
         roboto: ["Roboto", "sans-serif"],
         syne: ["Syne", "sans-serif"],
       },
-
+      boxShadow: {
+        "2xl": "0 30px 60px #03031c1a",
+      },
       colors: {
         primary: "#F50963",
         content: "#525258",

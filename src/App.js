@@ -7,6 +7,8 @@ import Shop from "./pages/Shop/Shop";
 import { useEffect } from "react";
 import { useLocale } from "antd/es/locale";
 import Wishlist from "./pages/Wishlist/Wishlist";
+import Login from "./pages/Login/Login";
+import Register from "./pages/Register/Register";
 function App() {
   const { pathname } = useLocation();
   useEffect(() => {
@@ -21,6 +23,8 @@ function App() {
         <Route path="contact" element={<Contact />} />
         <Route path="shop" element={<Shop />} />
         <Route path="wishlist" element={<Wishlist />} />
+        <Route path="login" element={<Login />} />
+        <Route path="register" element={<Register />} />
       </Route>
     </Routes>
   );

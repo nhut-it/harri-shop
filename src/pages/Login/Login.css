@@ -1,0 +1,36 @@
+.form-login .checkRemember{
+ width: 18px;
+ height: 18px;
+ position: relative;
+ border: 1px solid #E4E4E8;
+ display: inline-block;
+ margin-right: 10px;
+ text-align: center;
+ transition: all .5s;
+ transform: translateY(5px);
+
+}
+.form-login .checkRemember::after{
+ content: '';
+ width: 100%;
+ height: 100%;
+ background-color: white;
+ position: absolute;
+ display: block;
+ transform:scale(0);
+ opacity: 0;
+ transition: all 1s;
+ 
+}
+.form-login .input-check:checked + .checkRemember{
+ border-color: #F50963;
+}
+.form-login .input-check:checked + .checkRemember::after {
+ opacity: 1;
+ transition: all .7s;
+ background-color: #F50963;
+ 
+ transform: scale(.8);
+ border: #F50963;
+
+}

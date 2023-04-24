@@ -1,14 +1,20 @@
 import { createSlice } from "@reduxjs/toolkit";
+import Deal from "../../pages/Home/Deal/Deal";
 
 const sidebarPopupSlice = createSlice({
   name: "sidebarPopup",
-  initialState: false,
+  initialState: {
+    open: false,
+    content: "",
+  },
   reducers: {
     openSidebar: (state, action) => {
-      return true;
+      console.log("action", action.payload);
+      state.open = true;
+      state.content = action.payload;
     },
     closeSidebar: (state, action) => {
-      return false;
+      state.open = false;
     },
   },
 });

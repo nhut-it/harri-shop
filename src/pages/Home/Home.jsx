@@ -21,6 +21,7 @@ import Deal from "./Deal/Deal";
 import HomeBanner from "./HomeBanner/HomeBanner";
 import Feature from "./Feature/Feature";
 import FormSubscribe from "../../components/FormSubscribe/FormSubscribe";
+import SidebarPopup from "../../components/SidebarPopup/SidebarPopup";
 const Home = () => {
   return (
     <div className="bg-white ">
@@ -142,6 +143,7 @@ const Home = () => {
       <div className="subcribe bg-home-subcribe py-[50px] bg-no-repeat bg-center bg-cover">
         <FormSubscribe />
       </div>
+      {/* <SidebarPopup></SidebarPopup> */}
     </div>
   );
 };

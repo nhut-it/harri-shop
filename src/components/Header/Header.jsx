@@ -16,18 +16,22 @@ import bgSidebar from "../../assets/imgs/bg-sidebar.webp";
 import { motion } from "framer-motion";
 import { Badge, Collapse, Divider } from "antd";
 import { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import SidebarPopup from "../SidebarPopup/SidebarPopup";
 import { useDispatch, useSelector } from "react-redux";
-import { openSidebar } from "../../redux/slices/SidebarPopupSlice";
+import {
+  closeSidebar,
+  openSidebar,
+} from "../../redux/slices/SidebarPopupSlice";
+import Deal from "../../pages/Home/Deal/Deal";
+import product22 from "../../assets/imgs/product-22.webp";
+import product23 from "../../assets/imgs/product-23.webp";
 const { Panel } = Collapse;
 const Header = ({ bgHeader }) => {
-  const dispatch = useDispatch();
-  // const [open] = useSelector((state) => state.sidebarPopup);
-
   const [plusSubMenu, setPlusSubMenu] = useState(false);
   const [stickyClass, setStickyClass] = useState("relative bg-[#F0F2EE]");
-  // console.log("stickyClass", stickyClass);
+  const [openMenuSidebar, setOpenMenuSidebar] = useState(false);
+  const [openCartSidebar, setOpenCartSidebar] = useState(false);
   useEffect(() => {
     window.addEventListener("scroll", stickNavbar);
 
@@ -162,14 +166,14 @@ const Header = ({ bgHeader }) => {
             </a>
           </li>
           <li className="pr-[15px] text-xl">
-            <a
-              href="#"
+            <Link
+              to="login"
               className="text-[#525258] hover:text-black duration-200 transition"
             >
               <div className="user-action">
                 <FiUser />
               </div>
-            </a>
+            </Link>
           </li>
           <li className="pr-[15px] text-xl">
             <Badge count={0} showZero size="default" color="#F72C79">
@@ -186,17 +190,20 @@ const Header = ({ bgHeader }) => {
           </li>
           <li className="text-xl">
             <Badge count={3} size="default" color="#F72C79">
-              <a className="text-[#525258] text-xl hover:text-black duration-200 transition">
+              <button
+                onClick={() => setOpenCartSidebar(true)}
+                className="text-[#525258] text-xl pointer-events-auto hover:text-black duration-200 transition"
+              >
                 <div className="cart-action">
                   <FiShoppingCart />
                 </div>
-              </a>
+              </button>
             </Badge>
           </li>
         </ul>
 
         <button
-          onClick={() => dispatch(openSidebar())}
+          onClick={() => setOpenMenuSidebar(true)}
           className="navbar flex flex-col items-center lg:hidden"
         >
           <span className="block rounded mb-1 w-[25px] h-[2px] bg-[#000] translate-x-[-3px]"></span>
@@ -204,180 +211,319 @@ const Header = ({ bgHeader }) => {
           <span className="block rounded mt-1 w-[25px] h-[2px] bg-[#000]"></span>
         </button>
       </div>
-
-      <SidebarPopup>
-        <img
-          src={logo}
-          alt="logo harri shop"
-          className="logo w-[112px] h-auto"
-        />
-        <ul className="list-menu-sidebar font-space font-bold mt-5 text-sm">
-          <li className="py-[10px] border-b-[1px]  ">
-            <a href="#">Home</a>
-          </li>
-          <li className="py-[10px] border-b-[1px]  ">
-            <a href="#"> About Us</a>
-          </li>
-          <li className="py-[10px] border-b-[1px]  ">
-            <a href="#"> Shop</a>
-          </li>
-          <li>
-            <div className="flex justify-between items-center border-b-[1px] py-[5px] ">
-              <a href="#">Pages</a>
-              <span
-                className="w-[32px] h-[32px] border-[1px] "
-                onClick={() => setPlusSubMenu(!plusSubMenu)}
-              >
-                {plusSubMenu ? (
-                  <span className="w-[32px] h-[32px] bg-primary flex justify-center items-center">
-                    <AiOutlinePlus className="text-lg text-white rotate-45 transition duration-500  border-primary" />
-                  </span>
-                ) : (
-                  <span className="w-[32px] h-[32px]  flex justify-center items-center">
-                    <AiOutlinePlus className="text-lg text-[#03041c]   transition duration-500  " />
-                  </span>
-                )}
-              </span>
+      <div className="menu-sidebar">
+        <div
+          onClick={() => setOpenMenuSidebar(false)}
+          className={
+            openMenuSidebar
+              ? "overlay active h-full w-full fixed top-0 left-0 right-0 bottom-0 opacity-90 bg-[#4A4B5B] z-30"
+              : "overlay h-[100vh] w-screen fixed top-0 left-0 right-0 bottom-0 opacity-90 bg-[#4A4B5B] z-30"
+          }
+        ></div>
+        <div
+          className={
+            openMenuSidebar
+              ? "sidebar-content active w-full sm:w-[360px] h-full overflow-y-scroll  bg-white fixed top-0 bottom-0 right-0  z-50"
+              : "sidebar-content w-[360px] h-full overflow-y-scroll  bg-white fixed top-0 bottom-0 right-0  z-50"
+          }
+        >
+          <div className="sidebar-wrapper relative pt-[50px] pb-[145px]  px-[40px] ">
+            <div
+              onClick={() => setOpenMenuSidebar(false)}
+              className="close-btn w-[44px] h-[44px] rounded-full border-[1px] border-[#F1DAE6] leading-[44px] text-center flex justify-center items-center absolute top-[36px] right-[40px] hover:bg-primary cursor-pointer transititon duration-500"
+            >
+              <AiOutlineClose className="icon-close" />
             </div>
-            {plusSubMenu ? (
-              <ul className="submunu-sidebar">
-                <li className="py-[10px] border-b-[1px]">
-                  <a href="#" className="pl-[20px]">
-                    FAQs
+            <img
+              src={logo}
+              alt="logo harri shop"
+              className="logo w-[112px] h-auto"
+            />
+            <ul className="list-menu-sidebar font-space font-bold mt-5 text-sm">
+              <li className="py-[10px] border-b-[1px]  ">
+                <Link to="/">Home</Link>
+              </li>
+              <li className="py-[10px] border-b-[1px]  ">
+                <Link to="about"> About Us</Link>
+              </li>
+              <li className="py-[10px] border-b-[1px]  ">
+                <Link to="shop"> Shop</Link>
+              </li>
+              <li>
+                <div className="flex justify-between items-center border-b-[1px] py-[5px] ">
+                  <a className="pointer-events-none">Pages</a>
+                  <span
+                    className="w-[32px] h-[32px] border-[1px] "
+                    onClick={() => setPlusSubMenu(!plusSubMenu)}
+                  >
+                    {plusSubMenu ? (
+                      <span className="w-[32px] h-[32px] bg-primary flex justify-center items-center">
+                        <AiOutlinePlus className="text-lg text-white rotate-45 transition duration-500  border-primary" />
+                      </span>
+                    ) : (
+                      <span className="w-[32px] h-[32px]  flex justify-center items-center">
+                        <AiOutlinePlus className="text-lg text-[#03041c]   transition duration-500  " />
+                      </span>
+                    )}
+                  </span>
+                </div>
+                {plusSubMenu ? (
+                  <ul className="submunu-sidebar">
+                    <li className="py-[10px] border-b-[1px]">
+                      <a href="#" className="pl-[20px]">
+                        FAQs
+                      </a>
+                    </li>
+                    <li className="py-[10px] border-b-[1px]">
+                      <a href="#" className="pl-[20px]">
+                        {" "}
+                        Privacy & Policy
+                      </a>
+                    </li>
+                    <li className="py-[10px] border-b-[1px]">
+                      <a href="#" className="pl-[20px]">
+                        Terms & Conditions
+                      </a>
+                    </li>
+                    <li className="py-[10px] border-b-[1px]">
+                      <a href="#" className="pl-[20px]">
+                        {" "}
+                        Login
+                      </a>
+                    </li>
+                    <li className="py-[10px] border-b-[1px]">
+                      <a href="#" className="pl-[20px]">
+                        {" "}
+                        Register
+                      </a>
+                    </li>
+                    <li className="py-[10px] border-b-[1px]">
+                      <a href="#" className="pl-[20px]">
+                        Forgot Password
+                      </a>
+                    </li>
+                    <li className="py-[10px] border-b-[1px]">
+                      <a href="#" className="pl-[20px]">
+                        {" "}
+                        My Cart
+                      </a>
+                    </li>
+                    <li className="py-[10px] border-b-[1px]">
+                      <a href="#" className="pl-[20px]">
+                        {" "}
+                        My Wishlist
+                      </a>
+                    </li>
+                    <li className="py-[10px] border-b-[1px]">
+                      <a href="#" className="pl-[20px]">
+                        Checkout
+                      </a>
+                    </li>
+                    <li className="py-[10px] border-b-[1px]">
+                      <a href="#" className="pl-[20px]">
+                        {" "}
+                        Error 404
+                      </a>
+                    </li>
+                  </ul>
+                ) : (
+                  ""
+                )}
+              </li>
+              <li className="py-[10px]   ">
+                <Link to="contact">Contact Us</Link>
+              </li>
+            </ul>
+            <a
+              href="#"
+              className=" mt-[40px] btn-getting inline-flex items-center bg-[#E7095F] text-white  py-[9px] px-[22px] hover:bg-[#03041c] transition duration-300 mb-[150px]"
+            >
+              <span> Getting Started</span>
+
+              <IoIosArrowForward className="ml-2" />
+            </a>
+            <div className="follow">
+              <label htmlFor="" className="mb-[8px]">
+                Follow:
+              </label>
+              <ul className="list-social flex">
+                <li className=" h-[40px] w-[40px] border-2  border-[#eaeaef] mr-[5px]">
+                  <a
+                    href="#"
+                    className="text-center inline-block  h-[40px] w-[40px] leadding-[40px] flex items-center justify-center transition duration-500"
+                  >
+                    <FaFacebookF className="leading-[40px]" />
                   </a>
                 </li>
-                <li className="py-[10px] border-b-[1px]">
-                  <a href="#" className="pl-[20px]">
-                    {" "}
-                    Privacy & Policy
+                <li className=" h-[40px] w-[40px] border-2  border-[#eaeaef] mr-[5px]">
+                  <a
+                    href="#"
+                    className="text-center inline-block  h-[40px] w-[40px] leadding-[40px] flex items-center justify-center transition duration-500"
+                  >
+                    <BsTwitter />
                   </a>
                 </li>
-                <li className="py-[10px] border-b-[1px]">
-                  <a href="#" className="pl-[20px]">
-                    Terms & Conditions
+                <li className=" h-[40px] w-[40px] border-2  border-[#eaeaef] mr-[5px]">
+                  <a
+                    href="#"
+                    className="text-center inline-block  h-[40px] w-[40px] leadding-[40px] flex items-center justify-center transition duration-500"
+                  >
+                    <FaLinkedinIn />
                   </a>
                 </li>
-                <li className="py-[10px] border-b-[1px]">
-                  <a href="#" className="pl-[20px]">
-                    {" "}
-                    Login
-                  </a>
-                </li>
-                <li className="py-[10px] border-b-[1px]">
-                  <a href="#" className="pl-[20px]">
-                    {" "}
-                    Register
-                  </a>
-                </li>
-                <li className="py-[10px] border-b-[1px]">
-                  <a href="#" className="pl-[20px]">
-                    Forgot Password
-                  </a>
-                </li>
-                <li className="py-[10px] border-b-[1px]">
-                  <a href="#" className="pl-[20px]">
-                    {" "}
-                    My Cart
-                  </a>
-                </li>
-                <li className="py-[10px] border-b-[1px]">
-                  <a href="#" className="pl-[20px]">
-                    {" "}
-                    My Wishlist
-                  </a>
-                </li>
-                <li className="py-[10px] border-b-[1px]">
-                  <a href="#" className="pl-[20px]">
-                    Checkout
-                  </a>
-                </li>
-                <li className="py-[10px] border-b-[1px]">
-                  <a href="#" className="pl-[20px]">
-                    {" "}
-                    Error 404
+                <li className=" h-[40px] w-[40px] border-2  border-[#eaeaef] mr-[5px]">
+                  <a
+                    href="#"
+                    className="text-center inline-block  h-[40px] w-[40px] leadding-[40px] flex items-center justify-center transition duration-500"
+                  >
+                    <AiFillYoutube />
                   </a>
                 </li>
               </ul>
-            ) : (
-              ""
-            )}
-          </li>
-          <li className="py-[10px]   ">
-            <a href="#">Contact Us</a>
-          </li>
-        </ul>
-        <a
-          href="#"
-          className=" mt-[40px] btn-getting inline-flex items-center bg-[#E7095F] text-white  py-[9px] px-[22px] hover:bg-[#03041c] transition duration-300 mb-[150px]"
+            </div>
+            <Divider className="my-[40px] " />
+            <div className="contact font-space font-medium flex flex-col">
+              <div>
+                <a
+                  href="tel:+964 742 44 763"
+                  className="hover:text-primary font-bold inline-block transition duration-300 text-xl mb-[5px]"
+                >
+                  +964 742 44 763
+                </a>
+              </div>
+              <div>
+                <a
+                  href="mailto:info@harry.com"
+                  className="hover:text-primary inline-block transition duration-300 text-xl text-content mb-[15px]"
+                >
+                  info@harry.com
+                </a>
+              </div>
+            </div>
+            <img
+              src={bgSidebar}
+              alt="background side bar "
+              className="w-full absolute bottom-0 right-0 -z-10"
+            />
+          </div>
+        </div>
+      </div>
+      <div className="menu-sidebar cart-sidebar">
+        <div
+          onClick={() => setOpenCartSidebar(false)}
+          className={
+            openCartSidebar
+              ? "overlay active h-full w-full fixed top-0 left-0 right-0 bottom-0 opacity-90 bg-[#4A4B5B] z-30"
+              : "overlay h-[100vh] w-screen fixed top-0 left-0 right-0 bottom-0 opacity-90 bg-[#4A4B5B] z-30"
+          }
+        ></div>
+        <div
+          className={
+            openCartSidebar
+              ? "sidebar-content active w-full sm:w-[360px] h-full overflow-y-scroll  bg-white fixed top-0 bottom-0 right-0  z-50"
+              : "sidebar-content w-[360px] h-full overflow-y-scroll  bg-white fixed top-0 bottom-0 right-0  z-50"
+          }
         >
-          <span> Getting Started</span>
-
-          <IoIosArrowForward className="ml-2" />
-        </a>
-        <div className="follow">
-          <label htmlFor="" className="mb-[8px]">
-            Follow:
-          </label>
-          <ul className="list-social flex">
-            <li className=" h-[40px] w-[40px] border-2  border-[#eaeaef] mr-[5px]">
-              <a
-                href="#"
-                className="text-center inline-block  h-[40px] w-[40px] leadding-[40px] flex items-center justify-center transition duration-500"
-              >
-                <FaFacebookF className="leading-[40px]" />
-              </a>
-            </li>
-            <li className=" h-[40px] w-[40px] border-2  border-[#eaeaef] mr-[5px]">
-              <a
-                href="#"
-                className="text-center inline-block  h-[40px] w-[40px] leadding-[40px] flex items-center justify-center transition duration-500"
-              >
-                <BsTwitter />
-              </a>
-            </li>
-            <li className=" h-[40px] w-[40px] border-2  border-[#eaeaef] mr-[5px]">
-              <a
-                href="#"
-                className="text-center inline-block  h-[40px] w-[40px] leadding-[40px] flex items-center justify-center transition duration-500"
-              >
-                <FaLinkedinIn />
-              </a>
-            </li>
-            <li className=" h-[40px] w-[40px] border-2  border-[#eaeaef] mr-[5px]">
-              <a
-                href="#"
-                className="text-center inline-block  h-[40px] w-[40px] leadding-[40px] flex items-center justify-center transition duration-500"
-              >
-                <AiFillYoutube />
-              </a>
-            </li>
-          </ul>
-        </div>
-        <Divider className="my-[40px] " />
-        <div className="contact font-space font-medium flex flex-col">
-          <div>
-            <a
-              href="tel:+964 742 44 763"
-              className="hover:text-primary font-bold inline-block transition duration-300 text-xl mb-[5px]"
-            >
-              +964 742 44 763
-            </a>
+          <div className="sidebar-wrapper font-space relative pb-[85px]  ">
+            <div className="heading px-[20px] flex justify-between items-center py-[20px] shadow-md">
+              <h2 className="title font-bold">SHOPPING CART</h2>
+              <button onClick={() => setOpenCartSidebar(false)}>
+                <AiOutlineClose className="text-[20px] block" />
+              </button>
+            </div>
+            <ul>
+              <li className="border-b-[1px] py-[20px]">
+                <div className="flex justify-between items-start px-[20px]">
+                  <img src={product22} alt="" className="w-[70px]" />
+                  <div className="grow pl-[17px]">
+                    <a
+                      href=""
+                      className="text-[15px] inline-block font-medium hover:text-primary transition duration-500"
+                    >
+                      Alarm Clock for Kids
+                    </a>
+                    <span className="text-primary text-[14px] font-inter block font-medium">
+                      $58{" "}
+                      <span className="text-[10px] ml-[-4px] text-content">
+                        x2
+                      </span>
+                    </span>
+                  </div>
+                  <button>
+                    <AiOutlineClose className="text-[10px] block" />
+                  </button>
+                </div>
+              </li>
+              <li className="border-b-[1px] py-[20px]">
+                <div className="flex justify-between items-start px-[20px]">
+                  <img src={product22} alt="" className="w-[70px]" />
+                  <div className="grow pl-[17px]">
+                    <a
+                      href=""
+                      className="text-[15px] inline-block font-medium hover:text-primary transition duration-500"
+                    >
+                      Alarm Clock for Kids
+                    </a>
+                    <span className="text-primary text-[14px] font-inter block font-medium">
+                      $58{" "}
+                      <span className="text-[10px] ml-[-4px] text-content">
+                        x2
+                      </span>
+                    </span>
+                  </div>
+                  <button>
+                    <AiOutlineClose className="text-[10px] block" />
+                  </button>
+                </div>
+              </li>
+              <li className="border-b-[1px] py-[20px]">
+                <div className="flex justify-between items-start px-[20px]">
+                  <img src={product22} alt="" className="w-[70px]" />
+                  <div className="grow pl-[17px]">
+                    <a
+                      href=""
+                      className="text-[15px] inline-block font-medium hover:text-primary transition duration-500"
+                    >
+                      Alarm Clock for Kids
+                    </a>
+                    <span className="text-primary text-[14px] font-inter block font-medium">
+                      $58{" "}
+                      <span className="text-[10px] ml-[-4px] text-content">
+                        x2
+                      </span>
+                    </span>
+                  </div>
+                  <button>
+                    <AiOutlineClose className="text-[10px] block" />
+                  </button>
+                </div>
+              </li>
+            </ul>
+            <div className="px-[20px] pt-[20px]">
+              <div className="flex justify-between items-center m-[30px]">
+                <p className="text-[18px] font-space font-bold">Subtotal:</p>
+                <span className="text-[20px] text-primary font-inter font-bold">
+                  $2669.00
+                </span>
+              </div>
+              <div>
+                <a
+                  href=""
+                  className="text-title text-[15px] font-bold py-[10px] hover:bg-title hover:text-white text-center block px-[30px] bg-[#f1f1f1] text-[15px] text-content mb-[10px]"
+                >
+                  View Cart
+                </a>
+                <a
+                  href=""
+                  className="text-title text-[15px] font-medium py-[10px] hover:bg-title hover:text-white text-center border-[1px] block px-[30px] text-[15px] text-content"
+                >
+                  Check Out
+                </a>
+              </div>
+            </div>
           </div>
-          <div>
-            <a
-              href="mailto:info@harry.com"
-              className="hover:text-primary inline-block transition duration-300 text-xl text-content mb-[15px]"
-            >
-              info@harry.com
-            </a>
-          </div>
         </div>
-        <img
-          src={bgSidebar}
-          alt="background side bar "
-          className="w-full absolute bottom-0 right-0 -z-10"
-        />
-      </SidebarPopup>
+      </div>
     </header>
   );
 };
