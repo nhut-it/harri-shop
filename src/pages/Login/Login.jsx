@@ -4,12 +4,13 @@ import { AiFillLock, AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 import "./Login.css";
 import bgLogin from "../../assets/imgs/bg-login.webp";
 import bgLogin1 from "../../assets/imgs/bg-login1.webp";
+import { Link } from "react-router-dom";
 const Login = () => {
   return (
     <div className="h-screen m-auto my-[110px] form-login px-[10px] sm:px-auto">
       <form
         action=""
-        className="py-[50px] px-[20px] relative sm:px-[85px] w-full sm:max-w-[516px] mx-auto shadow-2xl"
+        className="py-[50px] px-[20px] relative sm:px-[85px] w-full md:max-w-[616px] mx-auto shadow-2xl"
       >
         <img
           src={bgLogin}
@@ -78,9 +79,9 @@ const Login = () => {
         </button>
         <p className="text-[14px] font-inter text-content text-center">
           Don’t have an account?{" "}
-          <a href="" className="text-primary font-medium">
+          <Link to="/register" href="" className="text-primary font-medium">
             Register Now
-          </a>{" "}
+          </Link>{" "}
         </p>
         <img
           src={bgLogin1}
