@@ -1,0 +1,31 @@
+.faq-tabs .ant-collapse-item:first-child{
+   padding-top: 0;
+}
+.faq-tabs .ant-collapse-header .ant-collapse-header-text{
+ font-size: 20px !important;
+
+}
+.faq-tabs .react-tabs__tab--selected.tablist-faq{
+   position: relative;
+   color: #F50963;
+   background-color: rgba(245,9,99,.06);
+   transition: all .5s linear;
+}
+.faq-tabs .tablist-faq::after{
+   content: '';
+   position: absolute;
+   right: 0;
+   left: 0;
+   width: 0;
+   top: 100%;
+   border-bottom:2px solid  #F50963;
+   transition: all .5s linear;
+   margin: auto;
+}
+.faq-tabs .tablist-faq.react-tabs__tab--selected::after{
+   display: block;
+   transition: all .5s linear;
+   
+   width: 100%;
+
+}

@@ -9,6 +9,7 @@ import { useLocale } from "antd/es/locale";
 import Wishlist from "./pages/Wishlist/Wishlist";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
+import Faqs from "./pages/Faqs/Faqs";
 function App() {
   const { pathname } = useLocation();
   useEffect(() => {
@@ -25,6 +26,7 @@ function App() {
         <Route path="wishlist" element={<Wishlist />} />
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
+        <Route path="faqs" element={<Faqs />} />
       </Route>
     </Routes>
   );

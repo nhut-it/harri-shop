@@ -91,7 +91,7 @@ const Header = ({ bgHeader }) => {
             </NavLink>
             <motion.ul className="min-w-[200px] z-50  shadow-lg font-normal sub-menu text-content bg-white pl-[25px] pt-[25px]  pb-[25px] absolute top-full leading-[26px] text-[15px]">
               <li>
-                <NavLink href="#" className="text-[14px]">
+                <NavLink to="faqs" href="#" className="text-[14px]">
                   FAQs
                 </NavLink>
               </li>
@@ -270,9 +270,14 @@ const Header = ({ bgHeader }) => {
                 {plusSubMenu ? (
                   <ul className="submunu-sidebar">
                     <li className="py-[10px] border-b-[1px]">
-                      <a href="#" className="pl-[20px]">
+                      <Link
+                        to="faqs"
+                        href="#"
+                        className="pl-[20px]"
+                        onClick={() => setOpenMenuSidebar(false)}
+                      >
                         FAQs
-                      </a>
+                      </Link>
                     </li>
                     <li className="py-[10px] border-b-[1px]">
                       <a href="#" className="pl-[20px]">

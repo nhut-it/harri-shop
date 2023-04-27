@@ -3,7 +3,6 @@ import { AiOutlineHome } from "react-icons/ai";
 import { IoIosArrowForward } from "react-icons/io";
 import { Link } from "react-router-dom";
 const Breadcrumb = ({ url }) => {
-  console.log("url", url.trim().split("/"));
   const renderLink = () => {
     const listLink = url.split("/");
     return listLink.map((link, index) => {
