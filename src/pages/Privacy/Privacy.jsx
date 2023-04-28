@@ -2,7 +2,7 @@ import React from "react";
 
 const Privacy = () => {
   return (
-    <div className="privacy">
+    <div className="privacy ">
       <section className=" bg-contact pt-[100px] pb-[87px]">
         <div className="sm:container mx-auto px-[10px] text-center">
           <h1 className="text-[70px] leading-[1] text-title font-space font-bold mb-[25px] tracking-tighter">
@@ -16,8 +16,8 @@ const Privacy = () => {
           </p>
         </div>
       </section>
-      <section className="lg:max-w-[936px] mx-auto px-[10px] lg:px-0 shadow-2xl">
-        <div className="px-[10px] py-[30px] md:p-[30px] lg:p-[70px]">
+      <section className="lg:max-w-[936px] mx-auto px-[10px] lg:px-0  pb-[120px]">
+        <div className="px-[10px] py-[30px`] md:p-[30px] lg:p-[70px] shadow-2xl">
           <div className="">
             <span className="font-space text-title mb-[12px] font-medium inline-block">
               Effective date: May 25, 2023
