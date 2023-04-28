@@ -1,4 +1,10 @@
-import { Route, Routes, useHref, useLocation } from "react-router-dom";
+import {
+  Navigate,
+  Route,
+  Routes,
+  useHref,
+  useLocation,
+} from "react-router-dom";
 import DefaultThemeplate from "./theme/DefaultThemeplate/DefaultThemeplate";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
@@ -10,6 +16,7 @@ import Wishlist from "./pages/Wishlist/Wishlist";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
 import Faqs from "./pages/Faqs/Faqs";
+import Privacy from "./pages/Privacy/Privacy";
 function App() {
   const { pathname } = useLocation();
   useEffect(() => {
@@ -27,6 +34,8 @@ function App() {
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
         <Route path="faqs" element={<Faqs />} />
+        <Route path="privacy" element={<Privacy />} />
+        <Route path="*" index element={<Navigate to="/" />} />
       </Route>
     </Routes>
   );

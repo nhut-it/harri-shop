@@ -248,7 +248,7 @@ const Faqs = () => {
               </div>
             </TabPanel>
             <TabPanel className="">
-              <div className="block md:flex justify-start mb-[95px] md:flex justify-start mb-[95px]">
+              <div className="block md:flex justify-start mb-[95px] ">
                 <div className=" basis-[284px] w-full mb-[24px] md:mb-0">
                   <h2 className="text-[30px] font-space font-bold whitespace-normal tracking-tighter leading-[1]">
                     Orders & Shipping
@@ -306,7 +306,7 @@ const Faqs = () => {
                     </Panel>
                     <Panel
                       header="How long do I get support & updates?"
-                      key="3"
+                      key="4"
                       // showArrow={false}
                     >
                       <p>
@@ -321,7 +321,7 @@ const Faqs = () => {
               </div>
             </TabPanel>
             <TabPanel className="">
-              <div className="block md:flex justify-start mb-[95px] md:flex justify-start mb-[95px]">
+              <div className="block md:flex justify-start mb-[95px] ">
                 <div className=" basis-[284px] w-full mb-[24px] md:mb-0">
                   <h2 className="text-[30px] font-space font-bold whitespace-normal tracking-tighter leading-[1]">
                     Orders & Shipping
@@ -379,7 +379,7 @@ const Faqs = () => {
                     </Panel>
                     <Panel
                       header="How long do I get support & updates?"
-                      key="3"
+                      key="4"
                       // showArrow={false}
                     >
                       <p>

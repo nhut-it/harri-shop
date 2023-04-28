@@ -96,32 +96,32 @@ const Header = ({ bgHeader }) => {
                 </NavLink>
               </li>
               <li>
-                <NavLink href="#" className="text-[14px]">
+                <NavLink to="privacy" className="text-[14px]">
                   Privacy & Policy
                 </NavLink>
               </li>
               <li>
-                <NavLink href="#" className="text-[14px]">
+                <NavLink to="terms" className="text-[14px]">
                   Terms & Conditions
                 </NavLink>
               </li>
               <li>
-                <NavLink href="#" className="text-[14px]">
+                <NavLink to="login" className="text-[14px]">
                   Login
                 </NavLink>
               </li>
               <li>
-                <NavLink href="#" className="text-[14px]">
+                <NavLink to="register" className="text-[14px]">
                   Register
                 </NavLink>
               </li>
               <li>
-                <NavLink href="#" className="text-[14px]">
+                <NavLink to="forgot" className="text-[14px]">
                   Forgot Password
                 </NavLink>
               </li>
               <li>
-                <NavLink href="#" className="text-[14px]">
+                <NavLink to="cart" className="text-[14px]">
                   My Cart
                 </NavLink>
               </li>
@@ -131,12 +131,12 @@ const Header = ({ bgHeader }) => {
                 </NavLink>
               </li>
               <li>
-                <NavLink href="#" className="text-[14px]">
+                <NavLink to="checkout" className="text-[14px]">
                   Checkout
                 </NavLink>
               </li>
               <li>
-                <NavLink href="#" className="text-[14px]">
+                <NavLink to="error" className="text-[14px]">
                   Error 404
                 </NavLink>
               </li>
@@ -272,7 +272,6 @@ const Header = ({ bgHeader }) => {
                     <li className="py-[10px] border-b-[1px]">
                       <Link
                         to="faqs"
-                        href="#"
                         className="pl-[20px]"
                         onClick={() => setOpenMenuSidebar(false)}
                       >
@@ -280,10 +279,10 @@ const Header = ({ bgHeader }) => {
                       </Link>
                     </li>
                     <li className="py-[10px] border-b-[1px]">
-                      <a href="#" className="pl-[20px]">
+                      <Link to="priviacy" className="pl-[20px]">
                         {" "}
                         Privacy & Policy
-                      </a>
+                      </Link>
                     </li>
                     <li className="py-[10px] border-b-[1px]">
                       <a href="#" className="pl-[20px]">
@@ -291,44 +290,44 @@ const Header = ({ bgHeader }) => {
                       </a>
                     </li>
                     <li className="py-[10px] border-b-[1px]">
-                      <a href="#" className="pl-[20px]">
+                      <NavLink to="login" className="pl-[20px]">
                         {" "}
                         Login
-                      </a>
+                      </NavLink>
                     </li>
                     <li className="py-[10px] border-b-[1px]">
-                      <a href="#" className="pl-[20px]">
+                      <Link to="register" className="pl-[20px]">
                         {" "}
                         Register
-                      </a>
+                      </Link>
                     </li>
                     <li className="py-[10px] border-b-[1px]">
-                      <a href="#" className="pl-[20px]">
+                      <Link to="forgot" className="pl-[20px]">
                         Forgot Password
-                      </a>
+                      </Link>
                     </li>
                     <li className="py-[10px] border-b-[1px]">
-                      <a href="#" className="pl-[20px]">
+                      <Link to="cart" className="pl-[20px]">
                         {" "}
                         My Cart
-                      </a>
+                      </Link>
                     </li>
                     <li className="py-[10px] border-b-[1px]">
-                      <a href="#" className="pl-[20px]">
+                      <Link to="wishlist" className="pl-[20px]">
                         {" "}
                         My Wishlist
-                      </a>
+                      </Link>
                     </li>
                     <li className="py-[10px] border-b-[1px]">
-                      <a href="#" className="pl-[20px]">
+                      <Link to="checkout" className="pl-[20px]">
                         Checkout
-                      </a>
+                      </Link>
                     </li>
                     <li className="py-[10px] border-b-[1px]">
-                      <a href="#" className="pl-[20px]">
+                      <Link to="error" className="pl-[20px]">
                         {" "}
                         Error 404
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 ) : (
