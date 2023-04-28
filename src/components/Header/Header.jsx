@@ -136,7 +136,7 @@ const Header = ({ bgHeader }) => {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="error" className="text-[14px]">
+                <NavLink to="error404" className="text-[14px]">
                   Error 404
                 </NavLink>
               </li>
@@ -324,7 +324,7 @@ const Header = ({ bgHeader }) => {
                       </Link>
                     </li>
                     <li className="py-[10px] border-b-[1px]">
-                      <Link to="error" className="pl-[20px]">
+                      <Link to="error404" className="pl-[20px]">
                         {" "}
                         Error 404
                       </Link>

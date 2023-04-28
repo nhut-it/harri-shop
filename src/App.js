@@ -17,6 +17,10 @@ import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
 import Faqs from "./pages/Faqs/Faqs";
 import Privacy from "./pages/Privacy/Privacy";
+import Terms from "./pages/Terms/Terms";
+import Forgot from "./pages/Forgot/Forgot";
+import Error404 from "./pages/Error404/Error404";
+import Cart from "./pages/Cart/Cart";
 function App() {
   const { pathname } = useLocation();
   useEffect(() => {
@@ -35,7 +39,11 @@ function App() {
         <Route path="register" element={<Register />} />
         <Route path="faqs" element={<Faqs />} />
         <Route path="privacy" element={<Privacy />} />
-        <Route path="*" index element={<Navigate to="/" />} />
+        <Route path="terms" element={<Terms />} />
+        <Route path="forgot" element={<Forgot />} />
+        <Route path="cart" element={<Cart />} />
+        {/* <Route path="error404" element={<Error404 />} /> */}
+        <Route path="*" index element={<Error404 />} />
       </Route>
     </Routes>
   );

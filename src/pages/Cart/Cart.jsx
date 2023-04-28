@@ -1,24 +1,24 @@
 import React from "react";
 import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
-import { NavLink, useHref } from "react-router-dom";
+import { Link, NavLink, useHref, useLocation } from "react-router-dom";
 import { BsArrow90DegLeft } from "react-icons/bs";
 import { GrFormClose } from "react-icons/gr";
-import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 import product3 from "../../assets/imgs/product-3.webp";
 import product4 from "../../assets/imgs/product-4.webp";
 import product6 from "../../assets/imgs/product-6.webp";
+import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 import FormSubscribe from "../../components/FormSubscribe/FormSubscribe";
-import { Table } from "antd";
-const Wishlist = () => {
+import { Space, Table, Tag } from "antd";
+const Cart = () => {
   const url = useHref();
 
   return (
-    <div className="page-wishlist ">
+    <div>
       <div className="bg-[#F1F1F1]">
         <div className="sm:container mx-auto px-[10px]">
           <div className="py-[100px] text-center font-space">
             <h1 className="text-[70px] mb-[10px] font-bold tracking-tighter leading-[1]">
-              My Wishlist
+              My Cart
             </h1>
             <div className="text-center flex justify-center">
               <Breadcrumb url={url} />
@@ -27,7 +27,7 @@ const Wishlist = () => {
         </div>
       </div>
       <div className="py-[100px] ">
-        <div className="sm:container mx-auto px-[10px] ">
+        <div className="sm:container mx-auto px-[10px] overflow-x-auto ">
           <div className="py-[17px]  px-[37px] bg-[#F1F1F1] font-space mb-[30px]">
             <NavLink
               to="/shop"
@@ -148,8 +148,32 @@ const Wishlist = () => {
               </tbody>
             </table>
           </div>
+          <div className="md:flex justify-end pt-[50px]">
+            <div className="w-full md:max-w-[451px] ">
+              <h2 className="text-[25px] font-space mb-[20px] text-title font-bold tracking-tighter">
+                Cart Totals
+              </h2>
+              <ul className="text-[15px]">
+                <li className="flex justify-between border-[1px]  py-[10px] px-[30px]">
+                  <span className="font-medium">Subtotal</span>
+                  <span className="text-content">$2669.00</span>
+                </li>
+                <li className="flex justify-between border-[1px]  py-[10px] px-[30px]">
+                  <span lassName="font-medium">Total</span>
+                  <span className="text-content">$2669.00</span>
+                </li>
+              </ul>
+              <a
+                href=""
+                className="bg-primary py-[16px] px-[29px] inline-block mt-[22px] text-white font-bold font-space"
+              >
+                Proceed to Checkout
+              </a>
+            </div>
+          </div>
         </div>
       </div>
+
       <div className="subcribe bg-home-subcribe py-[50px] bg-no-repeat bg-center bg-cover">
         <FormSubscribe />
       </div>
@@ -157,4 +181,4 @@ const Wishlist = () => {
   );
 };
 
-export default Wishlist;
+export default Cart;
